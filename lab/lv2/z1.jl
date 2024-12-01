@@ -149,3 +149,26 @@ println(objective_value(zad3))
     Vrijednost cilja:
     4000.0
 =#
+
+
+test = Model(GLPK.Optimizer)
+
+@variable(test,x1>=0)
+@variable(test,x2>=0)
+
+@objective(test,Min,3.5x1 + 4.6x2)
+
+@constraint(test,constraint1,5.8x1 + 4.5x2 >= 208.1)
+@constraint(test,constraint2,2.5x1 + 0.5x2 <= 265)
+@constraint(test,constraint3,5.5x1 + 4.5x2 == 208.1)
+
+
+print(test)
+
+optimize!(test)
+
+println("Rješenja: ")
+println("x1= ",value(x1))
+println("x2= ",value(x2))
+println("Vrijednost cilja: ")
+println(objective_value(test))

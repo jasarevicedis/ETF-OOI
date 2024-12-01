@@ -115,7 +115,7 @@ function rijesi_simplex(A, b, c)
 
 end
 
-println("1. Test: ", rijesi_simplex([30 16; 14 19; 11 26; 0 1], [22800, 14100, 15950, 550], [800, 1000])) # 40 stranica predavanja
+println("1. Test: ", rijesi_simplex([2 2 2; 2 3 1; 0 1 1;], [4,2,3], [2,3,1])) # 40 stranica predavanja
 println("2. Test: ", rijesi_simplex([-2 1; 0 1], [1, 3], [1, 2])) # Neograniceno rjesenje
 println("4. Test: ", rijesi_simplex([0.25 -8 -1 9; 0.5 -12 -0.5 3; 0 0 1 0], [0, 0, 1], [3, -80, 2, -24])) # Degenerirano rješenje
 
